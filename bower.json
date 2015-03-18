@@ -1,0 +1,31 @@
+{
+  "name": "paperfold",
+  "version": "1.0",
+  "homepage": "http://felixniklas.com/paperfold",
+  "authors": [
+    { "name" : "Felix Niklas",
+      "homepage" : "http://felixniklas.com/"
+    }
+  ],
+  "description": "3d Paperfold Animation Library",
+  "main": [ "./paperfold.js"],
+  "keywords": [
+    "paperfold",
+    "animation"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "*.json",
+    "!/bower.json",
+    "LICENSE",
+    "*.md"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "repository" :
+  { 
+    "type" : "git",
+    "url" : "http://github.com/mrflix/paperfold.git"
+  }
+}
