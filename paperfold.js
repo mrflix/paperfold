@@ -110,10 +110,22 @@ $.fn.paperfold = function(options){
             return false;
           }
           return (/(auto|scroll)/).test( parent.css( "overflow" ) + parent.css( "overflow-y" ) + parent.css( "overflow-x" ) );
-        }).eq( 0 );
+        }).eq( 0),
+        parentDocument
+      ;
 
-    return position === "fixed" || !scrollParent.length ? $( element[ 0 ].ownerDocument || document ) : scrollParent;
-  };
+    if(!scrollParent.length) {
+      if(typeof element[0] !== 'undefined') {
+        parentDocument = element[0].ownerDocument || document;
+      } else {
+        parentDocument = document;
+      }
+    } else {
+      parentDocument = scrollParent;
+    }
+
+    return position === "fixed" || parentDocument;
+  }
 
   var $this = $(this);
   var currentPercentage;
