@@ -262,6 +262,8 @@ $.fn.paperfold = function(options){
     ticker(tick);
   }
 
+  this.percentage = drawAt;
+
   this.open = function(){
     animateTo(1);
   }
